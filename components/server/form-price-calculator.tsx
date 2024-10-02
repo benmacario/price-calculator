@@ -23,7 +23,7 @@ import TablePrice from "@/components/server/table-price";
 
 export default function FormPriceCalculator() {
   return (
-    <Card className="w-full">
+    <Card className="md:w-96 md:mx-auto">
       <CardHeader>
         <CardTitle className="text-2xl">Calculadora de preço</CardTitle>
         <CardDescription>
