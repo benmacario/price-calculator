@@ -83,7 +83,7 @@ export default function TablePrice() {
       setValueTable([
         {
           unitFreight: `R$ ${valueCalculator.totalFretePerUnit.toFixed(2)}`,
-          machinePercentage: `${valueCalculator.percentMachine}%`,
+          machinePercentage: `${taxaMaquina}%`,
           unitPrice: `R$ ${parseFloat(precoUnidade).toFixed(2)}`,
           appliedPercentage: `${porcentagem}%`,
         },
@@ -100,8 +100,8 @@ export default function TablePrice() {
         <TableRow>
           <TableHead className="w-[100px]">Fr. Unidade</TableHead>
           <TableHead>% Maq</TableHead>
-          <TableHead className="text-right">% Aplicada</TableHead>
-          <TableHead>P.P. Unidade</TableHead>
+          <TableHead>% Aplicada</TableHead>
+          <TableHead className="text-right">P.P. Unidade</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -116,8 +116,10 @@ export default function TablePrice() {
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell colSpan={3}>Preço final sugerido</TableCell>
-          <TableCell className="text-right">R$ {total}</TableCell>
+          <TableCell colSpan={3} className="font-semibold">
+            Preço final sugerido
+          </TableCell>
+          <TableCell className="text-right font-semibold">R$ {total}</TableCell>
         </TableRow>
       </TableFooter>
     </Table>
