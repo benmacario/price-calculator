@@ -89,7 +89,7 @@ export default function TablePrice() {
         },
       ]);
     }
-  }, [totalItens, frete, taxaMaquina]);
+  }, [totalItens, frete, taxaMaquina, precoUnidade, porcentagem]);
 
   return (
     <Table>
