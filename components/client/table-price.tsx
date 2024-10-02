@@ -40,10 +40,12 @@ function priceCalculator({
   precoUnidade,
   porcentagem,
 }: PriceCalculator) {
-  const totalFretePerUnit = parseFloat(frete) / parseInt(totalItens, 10);
+  const totalFretePerUnit =
+    parseFloat(frete) / parseInt(totalItens) === 0 ? 1 : parseInt(totalItens);
   const percentMachine = calculatorPercent(taxaMaquina);
   const porcentagemTotal = calculatorPercent(porcentagem);
 
+  console.log(totalFretePerUnit);
   const newPrice =
     Math.ceil(
       ((parseFloat(precoUnidade) + totalFretePerUnit) /

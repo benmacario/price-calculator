@@ -1,4 +1,3 @@
-import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,18 +7,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-
 import ClientInputForms from "@/components/client/input-forms";
-import TablePrice from "@/components/server/table-price";
+import PriceDrawerResult from "@/components/server/price-drawer-result";
 
 export default function FormPriceCalculator() {
   return (
@@ -34,24 +23,7 @@ export default function FormPriceCalculator() {
         <ClientInputForms />
       </CardContent>
       <CardFooter>
-        <Drawer>
-          <DrawerTrigger className="w-full">
-            <label className={buttonVariants({ className: "w-full" })}>
-              Calcular
-            </label>
-          </DrawerTrigger>
-          <DrawerContent>
-            <DrawerHeader>
-              <DrawerTitle>Preço sugerido</DrawerTitle>
-              <DrawerDescription>
-                Esse é o preço sugerido para o seu produto.
-              </DrawerDescription>
-            </DrawerHeader>
-            <DrawerFooter>
-              <TablePrice />
-            </DrawerFooter>
-          </DrawerContent>
-        </Drawer>
+        <PriceDrawerResult />
       </CardFooter>
     </Card>
   );
