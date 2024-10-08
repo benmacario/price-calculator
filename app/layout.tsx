@@ -16,7 +16,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Calculadora de Preço",
   description: "Calculadora de Preço de produtos",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
